@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Initialize Lucide Icons
     lucide.createIcons();
-
+ 
     // --- THEME TOGGLE ---
     const themeToggle = document.getElementById("theme-toggle");
     const htmlEl = document.documentElement;

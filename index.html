@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BioAura'25 Symposium Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <div class="animated-background"></div>
+
+    <header class="header-section">
+        <div class="header-content">
+            <!-- Kings College Logo (updated) -->
+            <img src="Kings Logo.png" alt="Kings College Logo" class="college-logo" />
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+
+            <div class="container text-center">
+                <!-- BioAura'25 Logo (updated) -->
+                <img src="BioAura'25-Logo.png" alt="BioAura'25 Logo" class="event-logo" />
+                <h1 class="main-title">BioAura'25</h1>
+                <p class="subtitle">Biomedical Symposium</p>
+                <p class="college-name">Kings Engineering College</p>
+                
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="card-header"><i data-lucide="clock"></i> <span>Event Countdown</span></div>
+                        <div id="countdown" class="countdown-grid">
+                            <div><span id="days">0</span><small>Days</small></div>
+                            <div><span id="hours">0</span><small>Hours</small></div>
+                            <div><span id="minutes">0</span><small>Minutes</small></div>
+                            <div><span id="seconds">0</span><small>Seconds</small></div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-header"><i data-lucide="calendar"></i> <span>Event Date</span></div>
+                        <div class="text-center">
+                            <div class="date-text">October 10, 2025</div>
+                            <small>8:45 AM - 3:45 PM</small><br>
+                            <small>Kalvithandhai Auditorium</small>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-header"><i data-lucide="users"></i> <span>Registration</span></div>
+                        <div class="text-center">
+                            <div class="status-text">REGISTRATION OPEN</div>
+                            <small>For all the Engineering Departmens, Paramedical and Allied Science Departments</small>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://forms.gle/e8ci6WZ8ph3DMNC86" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-register">
+                    <i data-lucide="user-plus"></i> Register Now for BioAura'25 <i data-lucide="external-link"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Kings Engineering College</h2>
+                    <p>Empowering Tomorrow's Innovators with Quality Education and Excellence</p>
+                </div>
+                <div class="grid-2-col">
+                    <div class="card">
+                        <h3><i data-lucide="graduation-cap"></i> About College</h3>
+                        <p>Kings Engineering College focuses on industry-relevant technical education, research, and innovation to uplift society. We prioritize high-quality teaching, career guidance, and supporting economically disadvantaged students.</p>
+                        <p>Committed to excellence, we are approved by AICTE and affiliated with Anna University since 2001.</p>
+                        <a href="https://www.kingsedu.ac.in/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit College Website <i data-lucide="external-link"></i></a>
+                    </div>
+                    <div class="card">
+                        <h3><i data-lucide="book-open"></i> About the Department</h3>
+                        <p>The Undergraduate Programme B.E. Biomedical Engineering started in the year 2019 and is functioning effectively to impart quality education.</p>
+                        <p>The department has highly qualified and well experienced faculties in areas like Instrumentation, Biomedical Engineering, Medical electronics, and more. They are actively involved in the Teaching–Learning Process and Research activities.</p>
+                         <a href="https://www.kingsedu.ac.in/biomedical-engineering/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Department Page <i data-lucide="external-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="events" class="events-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Events Showcase</h2>
+                    <p>Discover our exciting lineup of events! Click on any event name to explore detailed information.</p>
+                </div>
+
+                <div class="tabs">
+                    <div class="tabs-list">
+                        <button class="tab-trigger active" data-tab="technical">
+                            <i data-lucide="sparkles"></i> Technical Events
+                        </button>
+                        <button class="tab-trigger" data-tab="non-technical">
+                            <i data-lucide="trophy"></i> Non-Technical Events
+                        </button>
+                    </div>
+
+                    <div id="technical" class="tab-content active">
+                        <div class="event-card">
+                            <button class="event-header"><h3>Xenomedica (Paper Presentation)</h3><i data-lucide="chevron-down" class="chevron"></i></button>
+                            <div class="event-details">
+                                <p><strong>Theme:</strong> Present innovative ideas on futuristic medical technologies.</p>
+                                <p><strong>Topics:</strong> AI & Digital Health, Biomedical Devices, Biotechnology, Advanced Materials, and more.</p>
+                                <p><strong>Coordinators:</strong> Mr. K. Jayachandran (+91 90801 50455), Ms. S. Poovarasi</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <button class="event-header"><h3>Medniche (Project Expo)</h3><i data-lucide="chevron-down" class="chevron"></i></button>
+                            <div class="event-details">
+                                <p><strong>Theme:</strong> A platform for showing the latest innovation in medical engineering. Innovative projects on health and human well-being are appreciated.</p>
+                                <p><strong>Rules:</strong> Maximum 3 members per team. The project should be a working model or prototype. Teams should bring their own display equipment.</p>
+                                <p><strong>Coordinators:</strong> Mr. M. P. Carrol Marx Samuel (+91 73586 60981), Ms. A. Hemamalini</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <button class="event-header"><h3>MedMystery (Technical Quiz)</h3><i data-lucide="chevron-down" class="chevron"></i></button>
+                            <div class="event-details">
+                                <p><strong>Theme:</strong> Decode the case. Discover the cure- where every clue counts! An electrifying quiz to showcase problem-solving and quick-thinking skills.</p>
+                                <p><strong>Coordinators:</strong> Ms. T. Keerthana, Mr. C. Manigandan (+91 63810 89285)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="non-technical" class="tab-content">
+                        <div class="event-card">
+                            <button class="event-header"><h3>Tik Tik Tik</h3><i data-lucide="chevron-down" class="chevron"></i></button>
+                            <div class="event-details">
+                                <p><strong>Theme:</strong> Quick thinking and rapid responses challenge.</p>
+                                <p><strong>Coordinators:</strong> Ms. S. Keerthika, Ms. S. Nandhana</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <button class="event-header"><h3>Aura Connect</h3><i data-lucide="chevron-down" class="chevron"></i></button>
+                            <div class="event-details">
+                                <p><strong>Theme:</strong> Link the clues, Spark the aura.</p>
+                                <p><strong>Coordinators:</strong> Ms. A. Ruthira, Mr. A. Sarathi</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <button class="event-header"><h3>Mind Blaster</h3><i data-lucide="chevron-down" class="chevron"></i></button>
+                            <div class="event-details">
+                                <p><strong>Theme:</strong> To solve the puzzle with your mind to win the game.</p>
+                                <p><strong>Coordinators:</strong> Mr. S. Aravind deva, Ms. E. S. Leema Dorathy</p>
+                            </div>
+                        </div>
+                         <div class="event-card">
+                            <button class="event-header"><h3>Surprise Event</h3><i data-lucide="chevron-down" class="chevron"></i></button>
+                            <div class="event-details">
+                                <p><strong>Theme:</strong> A mystery event that will be revealed on the day of the symposium!</p>
+                                <p><strong>Coordinators:</strong> Mr. K. Aswin, Mr. K. Benny Joshua</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="register" class="cta-section">
+            <div class="container text-center">
+                 <h2>Ready to Join BioAura'25?</h2>
+                 <p>Don't miss out! Register now to secure your spot and be part of the future of biomedical engineering.</p>
+                 <div class="benefits-grid">
+                     <div class="card">
+                         <i data-lucide="clock"></i><h3>Registration Now</h3>
+                         <p>Fee - Rs.150 per Participant (Food will be provided).</p>
+                     </div>
+                     <div class="card">
+                         <i data-lucide="award"></i><h3>Certificates & Prizes</h3>
+                         <p>All participants receive certificates; winners get exciting prizes.</p>
+                     </div>
+                     <div class="card">
+                         <i data-lucide="users"></i><h3>Network & Learn</h3>
+                         <p>Connect with peers and learn from industry experts.</p>
+                     </div>
+                 </div>
+                 <div class="cta-buttons">
+                     <a href="https://forms.gle/e8ci6WZ8ph3DMNC86" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i data-lucide="user-plus"></i> Register for BioAura'25
+                     </a>
+                    <!-- Open brochure in the page modal (use exact filename) -->
+                    <a id="view-brochure-btn" class="btn btn-outline" href="#" data-brochure="Bioaura'25-Brochure.png">
+                        <i data-lucide="file-text"></i> View Brochure
+                    </a>
+                 </div>
+            </div>
+        </section>
+
+        
+
+        <section id="team" class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet Our Team</h2>
+                    <p>The dedicated faculty and students working tirelessly to make BioAura'25 a grand success.</p>
+                </div>
+
+                <div class="team-layout">
+                    <div class="team-grid-3">
+                        <div class="card">
+                            <h3><i data-lucide="award"></i> Department Leadership</h3>
+                            <div class="team-member">
+                                <span class="badge">Head of Department</span>
+                                <p>Dr. S . Lekashri, M.E.,Ph.D.</p>
+                            </div>
+                            <div class="team-member">
+                                <span class="badge badge-secondary">Staff Coordinator</span>
+                                <p>Mr. P. Muthukumaraswamy-AP/BME</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3><i data-lucide="users"></i> Staff Organisers</h3>
+                            <ul class="team-list">
+                                <li><i data-lucide="user-check"></i>Dr. Prakash -ASP/BME</li>
+                                <li><i data-lucide="user-check"></i>Mrs. Saranya-AP/BME</li>
+                                <li><i data-lucide="user-check"></i>Mrs. Maria Celestina-AP/BME</li>
+                                <li><i data-lucide="user-check"></i>Mr. Ramachandhiran-AP/BME</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3><i data-lucide="users"></i> Student Leadership</h3>
+                            <p class="team-member">
+                                <span class="badge badge-outline">Student Coordinators</span>
+                                <p><span class="badge badge-secondary">Mr. V. Manoj (+91 73588 78062)</span></p>
+                                <p><span class="badge badge-secondary">Ms. B. Meenadeepika</span></p>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3><i data-lucide="users"></i> Student Organisers</h3>
+                        <div class="badge-group">
+                            <small><i data-lucide="user-check"></i>Mr. K. Aswin</small>
+                           <small> <i data-lucide="user-check"></i>Mr. P. V. Avinash</small>
+                            <small><i data-lucide="user-check"></i>Mr. S. Santhosh kumar</small>
+                        </div>
+                    </div>
+
+                    <div class="team-grid-2">
+                        <div class="card">
+                            <h3><i data-lucide="headphones"></i> Technical Event Coordinators</h3>
+                            <div class="team-member">
+                                <span class="badge">Event Coordinators</span>
+                                <p>Mr. C. Rohith, Ms. P. Vidhya</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3><i data-lucide="headphones"></i> Non-Technical Event Coordinators</h3>
+                            <div class="team-member">
+                                <span class="badge">Event Coordinators</span>
+                                <p>Mr. R. Brightson Patric, Ms. S. Dhanushya</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><i data-lucide="users-2"></i> Other Team Coordinators</h3>
+                        <div class="team-grid-3 other-teams">
+                            <div class="team-member-small">
+                                <h4>Registration team</h4>
+                                <span class="badge badge-outline">Ms. A. Harshavardhini</span>
+                                <span class="badge badge-outline">Mr. D. Vinish</span>
+                            </div>
+                            <div class="team-member-small">
+                                <h4>Anchoring team</h4>
+                                <span class="badge badge-outline">Ms. K. Priscilla</span>
+                                <span class="badge badge-outline">Ms. T. Keerthika</span>
+                            </div>
+                             <div class="team-member-small">
+                                <h4>Choir team</h4>
+                                <span class="badge badge-outline">Ms. L. Hena Paulin</span>
+                            </div>
+                             <div class="team-member-small">
+                                <h4>Reception team</h4>
+                                <span class="badge badge-outline">Ms. M. Indrapriyadharshini</span>
+                                <span class="badge badge-outline">Ms. T. Maria stephy</span>
+                            </div>
+                             <div class="team-member-small">
+                                <h4>Decoration team</h4>
+                                <span class="badge badge-outline">Mr. S. Ignesh</span>
+                                <span class="badge badge-outline">Ms. S. Pradeepa</span>
+                            </div>
+                             <div class="team-member-small">
+                                <h4>Refreshment team</h4>
+                                <span class="badge badge-outline">Ms. D. R. Diyaa sri</span>
+                                <span class="badge badge-outline">Mr. S. Santhosh kumar</span>
+                            </div>
+                            <div class="team-member-small">
+                                <h4>Certifications</h4>
+                                <span class="badge badge-outline">Ms. R. Deepa</span>
+                                <span class="badge badge-outline">Ms. V. Harichandhana</span>
+                            </div>
+                            <div class="team-member-small">
+                                <h4>Prize & Gift team</h4>
+                                <span class="badge badge-outline">Ms. M. Gayathri</span>
+                                <span class="badge badge-outline">Ms. E. S. Leema Dorathy</span>
+                            </div>
+                            <div class="team-member-small">
+                                <h4>Poster & Video Editing team</h4>
+                                <span class="badge badge-outline">Mr. K. Benny Joshua</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="location-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i data-lucide="map-pin"></i> Event Location</h2>
+                    <p>Join us at Kings Engineering College, Sriperumbudur, Chennai.</p>
+                </div>
+                <div class="grid-2-col">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.583485834271!2d80.07068217489588!3d12.93444098737358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a434c3c3a39%3A0x25b3ff255848ca59!2sKings%20Engineering%20College!5e0!3m2!1sen!2sin!4v1726748493155!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="address-details">
+                        <div class="card">
+                             <h3>Address</h3>
+                             <p>Kings Engineering College<br />Biomedical Department<br />Sriperumbudur, Chennai, Tamil Nadu</p>
+                             <a href="https://maps.app.goo.gl/VymBvBDDjfnRNKxn8" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i data-lucide="navigation"></i> Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>BioAura'25</h3>
+                    <p>A National Level Technical Symposium by the Department of Biomedical Engineering. It was open For all the Engineering Departmens, Paramedical and Allied Science Departments.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p><i data-lucide="mail"></i> <a href="mailto:bioaura25@gmail.com">bioaura25@gmail.com</a></p>
+                    <p><i data-lucide="phone"></i> <a href="tel:+917358878062">+91 73588 78062</a></p>
+                </div>
+                <div>
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/917358878062" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                        <a href="https://www.instagram.com/bioaura25/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.youtube.com/@Bioaura25" target="_blank" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p> Developed by a Biomedical Engineering Student</p>
+            <div class="copyright">© 2025 BioAura'25, Kings Engineering College. All rights reserved.</div>
+        </div>
+    </footer>
+    
+    <div id="brochure-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="brochure-title" tabindex="-1">
+        <div class="modal-content">
+            <!-- visible close icon/button -->
+            <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+
+            <!-- image src will be set dynamically from the button's data-brochure attribute -->
+            <img id="brochure-img" src="" alt="BioAura'25 Brochure" />
+
+            <div class="modal-actions">
+                <a id="brochure-download" href="#" download="Bioaura'25-Brochure.png" class="btn btn-secondary">
+                    <i data-lucide="download"></i> Download Brochure
+                </a>
+                <!-- secondary visible Close button for clarity -->
+                <button id="modal-close-btn-2" class="btn btn-outline modal-close-secondary" aria-label="Close brochure">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Toggle Chatbot">
+        <i data-lucide="message-circle" class="icon-open"></i>
+        <i data-lucide="x" class="icon-close"></i>
+    </button>
+
+    <div id="chatbot-window" class="chatbot-window">
+        <div class="chatbot-header">
+            <i data-lucide="bot"></i>
+            <h3>BioAura'25 Chatbot</h3>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages">
+            </div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button id="chatbot-send-btn" aria-label="Send Message"><i data-lucide="send"></i></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

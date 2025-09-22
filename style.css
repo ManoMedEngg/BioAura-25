@@ -102,13 +102,28 @@ a:hover { color: var(--primary-hover); }
 /* --- HEADER --- */
 .header-section { position: relative; color: white; padding: 4rem 0; min-height: 80vh; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); }
 .header-content { position: relative; z-index: 2; width: 100%; }
-.college-logo { position: absolute; top: 1rem; left: 1rem; height: 60px; }
+.college-logo {
+    width: 100%;
+    height: 16rem;
+    display: block;
+    margin: 0 auto 1rem auto;
+    max-width: none;
+    object-fit: contain;
+    background: transparent;
+    padding: 0.5rem 0;
+}
 .theme-toggle-btn { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .theme-toggle-btn .moon-icon { display: none; }
 html.dark .theme-toggle-btn .sun-icon { display: none; }
 html.dark .theme-toggle-btn .moon-icon { display: block; }
 
-.event-logo { margin: 0 auto 1.5rem; height: 120px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); }
+.event-logo {
+    display: block;
+    margin: 1.5rem auto 1rem auto;
+    max-width: 320px;
+    width:100%;
+    height: auto;
+}
 .main-title { font-size: 3.5rem; margin: 0; }
 .subtitle { font-size: 1.5rem; margin: 0.5rem 0; color: #e5e7eb; }
 .college-name { font-size: 1.2rem; color: #d1d5db; }
@@ -268,3 +283,4 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 #chatbot-input:focus { outline: none; border-color: var(--primary-color); }
 #chatbot-send-btn { background: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 0.5rem; margin-left: 0.5rem; cursor: pointer; }
 #chatbot-send-btn:disabled { background-color: var(--text-muted); }
+

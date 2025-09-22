@@ -106,11 +106,11 @@ a:hover { color: var(--primary-hover); }
     width: 100%;
     height: 16rem;
     display: block;
-    margin: 0 auto 1rem auto;
-    max-width: none;
+    margin: 0 auto 1rem auto; /* center and add space below */
+    max-width: none; /* ensure it stretches fully */
     object-fit: contain;
-    background: transparent;
-    padding: 0.5rem 0;
+    background: transparent; /* optional: white background for clarity */
+    padding: 0.5rem 0; /* optional: vertical padding */
 }
 .theme-toggle-btn { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .theme-toggle-btn .moon-icon { display: none; }
@@ -120,8 +120,8 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 .event-logo {
     display: block;
     margin: 1.5rem auto 1rem auto;
-    max-width: 320px;
-    width:100%;
+    max-width: 320px; /* increase as needed */
+    width: 100%;
     height: auto;
 }
 .main-title { font-size: 3.5rem; margin: 0; }
@@ -193,7 +193,7 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 
 /* =========== NEW TEAM SECTION STYLES =========== */
 .team-section .card { height: 100%; }
-.team-layout { display: flex; flex-direction: column; gap: 2rem; }
+.team-layout { display: flex; flex-direction: column; gap: 1.5rem; }
 .team-grid-3 { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
 @media (min-width: 768px) { .team-grid-3 { grid-template-columns: repeat(3, 1fr); } }
 .team-grid-2 { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
@@ -211,11 +211,55 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 .badge-group { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
 .other-teams {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
 }
 .team-member-small { border: 1px solid var(--border-color); padding: 1rem; border-radius: 8px; }
 .team-member-small h4 { margin: 0 0 0.5rem; font-size: 1rem; }
 .team-member-small .badge { margin-right: 0.25rem; }
+
+/* Ensure parent cards have spacing and nested member cards don't create double borders */
+.team-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* keeps consistent spacing between parent cards */
+}
+
+/* keep parent card visual style */
+.team-parent-card { /* these are top-level cards that wrap inner grids */
+  padding: 1.25rem;
+}
+
+/* Remove outer .card visual chrome for nested grid items and style them separately */
+.team-grid-2 .card,
+.team-grid-3 .card,
+.other-teams .card {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Use dedicated inner member card style to avoid "double borders" */
+.team-member-small {
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Ensure grid gaps apply and nested cards have spacing */
+.team-grid-2, .team-grid-3.other-teams {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .team-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .team-grid-3.other-teams { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Small visual tweak to badge group */
+.team-parent-card .badge-group { margin: 0.75rem 0 1rem; display:flex; flex-wrap:wrap; gap:0.5rem; }
 
 /* =========== NEW CHATBOT STYLES =========== */
 .chatbot-toggle {
@@ -284,3 +328,34 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 #chatbot-send-btn { background: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 0.5rem; margin-left: 0.5rem; cursor: pointer; }
 #chatbot-send-btn:disabled { background-color: var(--text-muted); }
 
+/* Keep student-organisers & other-team_parent cards transparent (no gray bg) */
+.team-parent-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 1.25rem;
+}
+
+/* New: apply the card (gray) background to specific "meet our" cards */
+.meet-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.25rem;
+}
+
+/* When a meet-card wraps .team-member-small, avoid double borders on the inner items */
+.meet-card .team-member-small {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0.75rem 0;
+}
+
+/* Ensure spacing for inner members inside a meet-card */
+.meet-card .team-grid-2,
+.meet-card .team-grid-3,
+.meet-card .other-teams {
+  gap: 0.75rem;
+}

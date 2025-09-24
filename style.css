@@ -269,8 +269,10 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
+    background-image: url('bio.ico');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
     cursor: pointer;
     z-index: 1000;
@@ -359,3 +361,4 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 .meet-card .other-teams {
   gap: 0.75rem;
 }
+

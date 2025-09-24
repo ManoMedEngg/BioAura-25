@@ -282,7 +282,7 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     transition: transform 0.3s, background-color 0.3s;
 }
-.chatbot-toggle:hover { background-color: var(--primary-hover); transform: scale(1.1); }
+.chatbot-toggle:hover { background-color: var(#000000); transform: scale(1.1); }
 .chatbot-toggle .icon-close { display: none; }
 .chatbot-toggle.is-open .icon-open { display: none; }
 .chatbot-toggle.is-open .icon-close { display: block; }
@@ -361,4 +361,5 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 .meet-card .other-teams {
   gap: 0.75rem;
 }
+
 

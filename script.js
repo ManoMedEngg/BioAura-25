@@ -214,3 +214,4 @@ document.addEventListener("DOMContentLoaded", () => {
         addMessage("Hello! I'm the BioAura'25 chatbot. How can I help you today?", false);
     }, 1000);
 });
+

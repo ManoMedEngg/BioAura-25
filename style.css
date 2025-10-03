@@ -363,3 +363,51 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
 }
 
 
+
+/* --- SPONSORS SECTION --- */
+.sponsors-section {
+    background-color: var(--card-bg); /* A slightly different background */
+    padding: rem 0;
+}
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(100px, minmax(50px, 1fr));
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 3rem auto;
+}
+.sponsor-card {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 1rem;
+    background-color: var(--background);/* Match body background */
+    border-radius: 8px;
+    min-height: 100px;
+    border: 1px solid var(--border-color);
+}
+.sponsor-logo {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(0);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.sponsor-logo:hover {
+    filter: grayscale(0);
+    opacity: 80;
+    transform: scale(1.05);
+}
+.sponsor-placeholder {
+    font-style: italic;
+    color: var(--text-muted);
+}
+.sponsor-cta {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+}
+
+

@@ -13,7 +13,6 @@
     --text-muted-dark: #9ca3af; /* gray-400 */
     --border-light: #e5e7eb;
     --border-dark: #374151;
-
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -362,51 +361,57 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
   gap: 0.75rem;
 }
 
-
-
 /* --- SPONSORS SECTION --- */
 .sponsors-section {
-    background-color: var(--card-bg); /* A slightly different background */
-    padding: rem 0;
+    background-color:transparent; /* A slightly different background */
+    padding: 4rem 0;
 }
+
 .sponsors-grid {
     display: grid;
-    grid-template-columns: repeat(100px, minmax(50px, 1fr));
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
     align-items: center;
-    justify-content: center;
-    max-width: 900px;
-    margin: 3rem auto;
+    justify-items: center;
 }
 .sponsor-card {
     display: flex;
-    justify-content: left;
-    align-items: left;
+    /* Center the logo perfectly inside its card */
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     background-color: var(--background);/* Match body background */
     border-radius: 8px;
-    min-height: 100px;
-    border: 1px solid var(--border-color);
+    min-height: 120px; /* Give cards a uniform minimum height */
+    border: 2px solid var(--border-color);
 }
+
 .sponsor-logo {
     max-width: 100%;
-    height: auto;
+    /* Set a max-height to visually balance logos of different sizes */
+    max-height: 200px; 
+    width: auto; /* Let width adjust based on the height to maintain aspect ratio */
     filter: grayscale(0);
     opacity: 0.8;
     transition: all 0.3s ease;
 }
+
 .sponsor-logo:hover {
     filter: grayscale(0);
-    opacity: 80;
+    opacity: 1; /* Corrected from 80 to 1 */
     transform: scale(1.05);
 }
-.sponsor-placeholder {
-    font-style: italic;
-    color: var(--text-muted);
-}
+
 .sponsor-cta {
     text-align: center;
     margin-top: 3rem;
     font-size: 1.1rem;
 }
 
+/* Make the grid responsive on smaller screens */
+@media (max-width: 600px) {
+    .sponsors-grid {
+        /* Stack the logos vertically on mobile */
+        grid-template-columns: 1fr;
+    }
+}

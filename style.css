@@ -13,7 +13,10 @@
     --text-muted-dark: #9ca3af; /* gray-400 */
     --border-light: #e5e7eb;
     --border-dark: #374151;
+    --primary-ribbon: #ff0000; /* red-500 */
+    --secondary-ribbon: #051d58; /* orange-500 */
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 html.dark {
@@ -414,4 +417,31 @@ html.dark .theme-toggle-btn .moon-icon { display: block; }
         /* Stack the logos vertically on mobile */
         grid-template-columns: 1fr;
     }
+}
+/* --- FLASH RIBBON --- */
+.flash-ribbon {
+    background: var(--secondary-ribbon);
+    color: white; 
+     padding: 0.75rem 0;
+    text-align: center;
+    animation: pulse-bg 3s infinite;
+}
+.flash-ribbon p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.flash-ribbon a {
+    font-weight: 600;
+     color: var(--secondary-color);
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+@keyframes pulse-bg {
+    0% { background-color: var(--primary-ribbon); }
+    50% { background-color: var(--secondary-ribbon); }
+    100% { background-color: var(--text-muted-light); }
 }
